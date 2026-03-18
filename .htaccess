@@ -1,0 +1,89 @@
+<!-- # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/stdlapi/api.stdl.site"
+PassengerBaseURI "/"
+PassengerNodejs "/home/stdlapi/nodevenv/api.stdl.site/18/bin/node"
+PassengerAppType node
+PassengerStartupFile index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+
+
+
+
+
+
+
+
+[root@102-219-189-147 ~]# mongosh
+
+Current Mongosh Log ID: 69a08f1946e36a521b8563b0
+
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.7.0
+
+Using MongoDB:          7.0.30
+
+Using Mongosh:          2.7.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+
+You can opt-out by running the disableTelemetry() command.
+
+------
+
+   The server generated these startup warnings when booting
+
+   2026-02-26T18:18:06.127+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+
+   2026-02-26T18:18:06.127+00:00: vm.max_map_count is too low
+
+
+
+   use admin
+
+db.createUser({
+
+  user: "admin",
+
+  pwd: "LoveworldLSDC",
+
+  roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+
+})
+
+
+rrent Mongosh Log ID: 69a09c65a96bb15b628563b0
+Connecting to:          mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&authSource=admin&appName=mongosh+2.7.0
+Using MongoDB:          7.0.30
+Using Mongosh:          2.7.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test>
+
+
+db.createUser({   user: "appuser",   pwd: "LoveworldLSDC1", roles: [ { role: "readWrite", db: "LSDC" } ] })
+
+mongosh "mongodb://appuser:LoveworldLSDC1@127.0.0.1:27017/LSDC?authSource=LSDC"
+
+"C:\Users\solut\dump.zip"
+mongodb+srv://turnermarvelous:TXwJ4Zp7nAgVcRJb@cluster0.osgfdcc.mongodb.net/test
+mongodb+srv://turnermarvelous:TXwJ4Zp7nAgVcRJb@cluster0.osgfdcc.mongodb.net/test
+
+mongosh -u admin -p "LoveworldLSDC" --authenticationDatabase admin
+mongorestore \
+  --uri "mongodb://appuser:LoveworldLSDC1@127.0.0.1:27017/test?authSource=test" \
+  --db test \
+  --oplogReplay \
+  /root/atlas-dump/dump/test
+
+
+
+102.219.189.147
+stdlftp@api.stdl.site
+PORT ;21
+  LoveworldLSDC123 -->
