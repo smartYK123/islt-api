@@ -5,12 +5,12 @@ const axios = require("axios");
 const User = require("../models/user");
 
 const CLIENT_ID = "com.kingschat";
-const REDIRECT_URI = "https://d64a-102-88-114-169.ngrok-free.app/kc_callback/kc-callback";
+const REDIRECT_URI = "https://api.islt.org/kc_callback/kc-callback";
 const SCOPES = encodeURIComponent(JSON.stringify(["conference_calls"]));
 
 /* Store redirect temporarily */
 let mobileRedirectURL = null;
-
+//token
 /* ======================================== START LOGIN ======================================== */
 router.get("/kc-login", (req, res) => {
   console.log("=== [KC] Login initiation requested ===");

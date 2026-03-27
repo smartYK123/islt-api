@@ -140,9 +140,9 @@ router.post("/verify-mentee", async (req, res) => {
     }
 
     // ❌ CASE 2: CODE USED BY ANOTHER USER → BLOCK
-    if (codeDoc.used && String(codeDoc.usedBy) !== String(user._id)) {
-      return res.status(400).json({ error: "Code already used" });
-    }
+    // if (codeDoc.used && String(codeDoc.usedBy) !== String(user._id)) {
+    //   return res.status(400).json({ error: "Code already used" });
+    // }
 
     // ✅ ASSIGN CODE
     user.menteeCode = normalizedCode;
